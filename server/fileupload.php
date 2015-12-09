@@ -90,6 +90,7 @@ $uploadPath = $uploadDir . DIRECTORY_SEPARATOR . $fileName;
 $chunk = isset($_REQUEST["chunk"]) ? intval($_REQUEST["chunk"]) : 0;
 $chunks = isset($_REQUEST["chunks"]) ? intval($_REQUEST["chunks"]) : 1;
 
+//echo var_dump($_FILES);
 // Remove old temp files
 if ($cleanupTargetDir) {
     if (!is_dir($targetDir) || !$dir = opendir($targetDir)) {
@@ -173,6 +174,6 @@ if ($done) {
     }
     @fclose($out);
 }
-
 // Return Success JSON-RPC response
-die('{"fileName" : "'.$fileName.'"}');
+$result = array('fileName'=>$fileName,'Files'=>$_FILES);
+echo json_encode($result);

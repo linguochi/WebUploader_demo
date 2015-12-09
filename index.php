@@ -4,10 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>WebUploader演示</title>
     <link rel="stylesheet" type="text/css" href="css/webuploader.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 </head>
 <body>
 <div id="wrapper">
     <div id="container">
+        <form action="index.php" method="post">
+            <input type="text" name="user_name">
+            <input type="submit" value="提交">
+        </form>
         <!--头部，相册选择和格式选择-->
         <div id="uploader" class="wu-example">
             <!--用来存放文件信息-->
@@ -21,6 +26,7 @@
 </div>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/webuploader.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/upload.js"></script>
 </body>
 </html>

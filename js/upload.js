@@ -50,9 +50,9 @@ jQuery(function() {
         $percent.css( 'width', percentage * 100 + '%' );
     });
 
-    uploader.on( 'uploadSuccess', function( file , response) {
+    uploader.on( 'uploadSuccess', function( file,response ) {
         $( '#'+file.id ).find('p.state').text('已上传');
-        console.log(response);
+        console.log(response.fileName);
     });
 
     uploader.on( 'uploadError', function( file ) {
